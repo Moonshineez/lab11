@@ -1,29 +1,36 @@
-import time
-import random
 
-
-
+Алг поиска элемента
+```python
 def alg(m,a):
     for i in m:
         if a==i:
             return 1
     return 0
+```
 
+алг генерации массива
+```python
+import random
 def generate_array(n):
     arr = []
     for i in range(n):
         arr.append(random.randint(0, 10000))
     return arr
+```
 
+функция измерения времени
+```python
+import time
 def measure_time(func, data,a):
     start = time.perf_counter()
     func(data,a)
     end = time.perf_counter()
     return end - start
-
+```
+эксперимент
+```python
 if __name__ == '__main__':
     sizes = [100, 500, 1000, 5000, 10000]
-    
     for n in sizes:
         arr = generate_array(n)
         a = arr[0]
