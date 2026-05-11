@@ -13,7 +13,7 @@ def find_max(arr):
     return max2
 ```
 
-3.измерение времени
+2.измерение времени
 ```python
 import time
 def measure_time(func, data):
@@ -22,7 +22,7 @@ def measure_time(func, data):
     end = time.perf_counter()
     return end - start
 ```
-2.генерация массива
+3.генерация массива
 ```python
 import random
 def generate_array(n):
