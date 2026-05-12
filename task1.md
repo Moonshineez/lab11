@@ -1,5 +1,5 @@
+1.реализация
 
-Алг поиска элемента
 ```python
 def alg(m,a):
     for i in m:
@@ -8,7 +8,8 @@ def alg(m,a):
     return 0
 ```
 
-алг генерации массива
+2.генерация массива
+
 ```python
 import random
 def generate_array(n):
@@ -18,7 +19,8 @@ def generate_array(n):
     return arr
 ```
 
-функция измерения времени
+3.измерение времени
+
 ```python
 import time
 def measure_time(func, data,a):
@@ -27,13 +29,21 @@ def measure_time(func, data,a):
     end = time.perf_counter()
     return end - start
 ```
-эксперимент
+
+4.эксперименты
 ```python
 if __name__ == '__main__':
-    sizes = [100, 500, 1000, 5000, 10000]
+    sizes = [100, 1000, 5000, 10000]
     for n in sizes:
         arr = generate_array(n)
         a = arr[0]
         t = measure_time(alg, arr, a)
         print(n, f"{t:.7f}")
+```
 
+|         n          |            t           |
+|--------------------|------------------------|
+| 100                | 0.0000010              |
+| 1000               | 0.0000013              |
+| 5000               | 0.0000017              |
+| 10000              | 0.000002               |
